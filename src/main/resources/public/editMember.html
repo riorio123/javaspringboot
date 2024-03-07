@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Data Member</title>
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center">Edit Data Member</h1>
+        <form action="/edit/${aSingleMemberObject.id}" method="POST" modelAttribute="aSingleMemberObject">
+        
+        <p>
+            <form:label path="name">Name</form:label>
+            <!-- <form:errors path="nameame"/> -->
+            <form:input path="name" />
+        </p>
+        <p>
+            <form:label path="dob">DOB</form:label>
+            <!-- <form:errors path="dob"/> -->
+            <form:input path="dob" />
+        </p>
+        <p>
+            <form:label path="education">Education</form:label>
+            <!-- <form:errors path="education"/> -->
+            <form:input path="education" />
+        </p>
+        <p>
+            <form:label path="email">Email</form:label>
+            <!-- <form:errors path="email"/> -->
+            <form:input path="email" />
+        </p>
+        <p>
+            <form:label path="mobileno">Mobile No</form:label>
+            <!-- <form:errors path="mobileno"/> -->
+            <form:input path="mobileno" />
+        </p>
+        <input type="submit" value="Save"/>
+    </form>
+    <a href="/member">Home</a>
+    </div>
+</body>
+</html>
